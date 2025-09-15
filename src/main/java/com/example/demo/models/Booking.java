@@ -12,13 +12,15 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Date booking_date;
-    private DayOfWeek day;
-    private int slotno;
+    public Date booking_date;
+    public DayOfWeek day;
+    public int slotno;
 
     @OneToOne
     @JoinColumn(name = "request_id")
     private Request request;
+    @OneToOne
+    private Halls hall;
 
  
 }

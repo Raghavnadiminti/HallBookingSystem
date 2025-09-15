@@ -14,8 +14,11 @@ public class Request {
     @JoinColumn(name = "clublead_id")
     private Clublead requester;
 
-    private String status;
-    private String letter;
+    @OneToOne
+    private Halls hall ;
+
+    public String status;
+    public String letter;
 
     // getters and setters
 }

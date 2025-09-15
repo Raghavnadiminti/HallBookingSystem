@@ -10,9 +10,13 @@ public class Clublead {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-    private String email;
+    public String name;
+    public String email;
     private String password;
+
+    public String getpassword(){
+        return this.password;
+    }
 
 
 }

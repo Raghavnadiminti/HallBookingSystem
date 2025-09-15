@@ -10,7 +10,10 @@ public class Halls {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String hallName;
+    public String hallName;
+
+    @OneToMany
+    private Booking booking;
 
 
 }
